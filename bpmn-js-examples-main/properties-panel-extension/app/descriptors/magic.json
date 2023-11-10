@@ -8,9 +8,9 @@
   "associations": [],
   "types": [
     {
-      "name": "BewitchedStartEvent",
+      "name": "AlteredScriptTask",
       "extends": [
-        "bpmn:StartEvent"
+        "bpmn:ScriptTask"
       ],
       "properties": [
         {

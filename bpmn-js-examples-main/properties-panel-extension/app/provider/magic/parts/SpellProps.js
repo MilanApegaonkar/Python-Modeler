@@ -1,6 +1,6 @@
 import { html } from 'htm/preact';
 
-import { TextFieldEntry, isTextFieldEntryEdited } from '@bpmn-io/properties-panel';
+import { TextAreaEntry, isTextAreaEntryEdited } from '@bpmn-io/properties-panel';
 import { useService } from 'bpmn-js-properties-panel';
 
 export default function(element) {
@@ -10,7 +10,7 @@ export default function(element) {
       id: 'spell',
       element,
       component: Spell,
-      isEdited: isTextFieldEntryEdited
+      isEdited: isTextAreaEntryEdited
     }
   ];
 }
@@ -32,14 +32,14 @@ function Spell(props) {
     });
   };
 
-  return html`<${TextFieldEntry}
+  return html`<${TextAreaEntry}
     id=${ id }
     element=${ element }
     description=${ translate('Apply a black magic spell') }
-    label=${ translate('Spell') }
+    label=${ translate('PyScript') }
     getValue=${ getValue }
     setValue=${ setValue }
     debounce=${ debounce }
-    tooltip=${ translate('Check available spells in the spellbook.') }
+    tooltip=${ translate('Check Indentation.') }
   />`;
 }

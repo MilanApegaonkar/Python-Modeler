@@ -39,7 +39,7 @@ export default function MagicPropertiesProvider(propertiesPanel, translate) {
     return function(groups) {
 
       // Add the "magic" group
-      if (is(element, 'bpmn:StartEvent')) {
+      if (is(element, 'bpmn:ScriptTask')) {
         groups.push(createMagicGroup(element, translate));
       }
 
@@ -64,9 +64,9 @@ function createMagicGroup(element, translate) {
   // create a group called "Magic properties".
   const magicGroup = {
     id: 'magic',
-    label: translate('Magic properties'),
+    label: translate('Python Script'),
     entries: spellProps(element),
-    tooltip: translate('Make sure you know what you are doing!')
+    tooltip: translate('Write Python Code')
   };
 
   return magicGroup;
