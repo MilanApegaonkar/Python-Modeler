@@ -46,6 +46,11 @@ class BPMNParser:
         elif child.tag.__contains__('task'):
             node = CallActivityNode(child.get('id'))
             self.__set_attrib_to_node(child, node)
+        elif child.tag.__contains__('scriptTask'):
+            node = CallActivityNode(child.get('id'))
+            self.__set_attrib_to_node(child, node)
+
+
         return node
 
     def __set_attrib_to_node(self, child, node):
@@ -53,6 +58,11 @@ class BPMNParser:
             if key == 'name':
                 if node.getType() == 'task':
                     node.setName(child.attrib[key])
+            if key=="{http://magic}spell":
+                if node.getType()=='task':
+                    node.setScript(child.attrib[key])
+
+
 
     def setCondition(self):
         sourceRef = None

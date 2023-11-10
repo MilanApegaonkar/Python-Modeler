@@ -4,7 +4,7 @@ from TranslateAlgorithm import TranslateAlgorithm
 from Validator import Validator
 
 if __name__ == '__main__':
-    parser = BPMNParser("diagram.bpmn")
+    parser = BPMNParser("diagram_script_task.bpmn")
     # ™parser = BPMNParser("test.bpmn")
     parser.parse_nodes()
     raw_tree = parser.connect_nodes()

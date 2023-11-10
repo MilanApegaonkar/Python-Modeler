@@ -4,6 +4,7 @@ class TranslateAlgorithm:
     def translate(self, node):
         children = node.getChildren()
         output = ""
+        temp_output = ''
         if node.getType() == 'StartEvent':
             output = self.outputIniziale()
             for x in children:
@@ -30,13 +31,17 @@ class TranslateAlgorithm:
         elif node.getType() == 'Sequence':
             for x in children:
                 output += self.translate(x)
-        elif node.getType() == 'task':
+
+        elif node.getType() == 'task' :
             parents = node.getParents()
             grandParent = parents[0].getParents()
             accapo = ""
             if grandParent[0].getType() != 'ParallelGateway':
                 accapo += "\n"
-            output = self.indentationMethod(node) + node.getName() + accapo
+            if node.getScript()!='':
+               for script in node.getScript().split('\n'):
+                    temp_output =temp_output+ self.indentationMethod(node) + script + accapo
+               output=output+temp_output
         return output
 
     def indentationMethod(self, node):
