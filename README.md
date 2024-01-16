@@ -1,20 +1,24 @@
 Can fully connected feed-forward neural network ever learn y=x^2 dependece (with any number of neurons and any number of layers)?
 
 The dataset which is exactly y=x^2:
+<br/>
 <img width="677" alt="Screenshot 2024-01-16 at 3 02 23 PM" src="https://github.com/MilanApegaonkar/Python-Modeler/assets/34775146/d3371d70-ef22-429c-a74a-b6c9a3bba092">
+<br/>
 
 
 
 
 Chat-GPT suggested model:
+<br/>
 <img width="666" alt="Screenshot 2024-01-16 at 3 03 34 PM" src="https://github.com/MilanApegaonkar/Python-Modeler/assets/34775146/5cb84c81-79c7-4333-9472-f5f0359eca6e">
 
-
+<br/>
 
 
 
 I dervied all the equations of this neural network once its trained by getting weights and biases:
 using below logic:
+<br/>
 <img width="822" alt="Screenshot 2024-01-16 at 3 11 58 PM" src="https://github.com/MilanApegaonkar/Python-Modeler/assets/34775146/0f27af6b-b2af-43ae-8ca9-6c6a4c9bed25">
 
 
@@ -33,8 +37,9 @@ layer2 equation linear part:
 
 If I consider the value of x = 30 then expected value of y should be 900
 but if I plug in x in layer1 equations:
+<br/>
 <img width="278" alt="Screenshot 2024-01-16 at 3 14 52 PM" src="https://github.com/MilanApegaonkar/Python-Modeler/assets/34775146/afada9cf-0eee-454f-a1f2-19f8649fc9a7">
-
+<br/>
 
 
 
@@ -43,9 +48,10 @@ but if I plug in x in layer1 equations:
 then using this values if I plug it in layer2 equation then the value I get is 253.79483469338047 
 
 Same I get when I do:
+<br/>
 <img width="541" alt="Screenshot 2024-01-16 at 3 16 32 PM" src="https://github.com/MilanApegaonkar/Python-Modeler/assets/34775146/3c0a6413-d9f6-4c91-bf18-2f8a0b4b0bf7">
 
-
+<br/>
 
 
 
