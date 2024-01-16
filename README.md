@@ -17,6 +17,7 @@ Chat-GPT suggested model:
 
 
 I dervied all the equations of this neural network once its trained by getting weights and biases:
+<br/>
 using below logic:
 <br/>
 <img width="822" alt="Screenshot 2024-01-16 at 3 11 58 PM" src="https://github.com/MilanApegaonkar/Python-Modeler/assets/34775146/0f27af6b-b2af-43ae-8ca9-6c6a4c9bed25">
